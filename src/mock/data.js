@@ -1,0 +1,218 @@
+// Mock data for the entire prototype
+
+// 当前登录管理员
+export const currentUser = {
+  id: 'M001',
+  name: '张三',
+  account: 'zhangsan',
+  avatar: '',
+  role: '超级管理员'
+}
+
+export const products = [
+  { id: 'P001', name: '智马翻译', bizPrefix: 'ZM', icon: '🌐', desc: '多语言智能翻译服务', unit: '点数', status: true, listed: true, spuLimit: 10, featureCount: 5, createTime: '2026-01-15 10:00:00' },
+  { id: 'P002', name: '智马漫影', bizPrefix: 'MY', icon: '🎬', desc: 'AI漫画与视频生成', unit: '次数', status: true, listed: true, spuLimit: 8, featureCount: 3, createTime: '2026-02-20 14:30:00' },
+]
+
+export const members = [
+  { id: 'M001', name: '张三', account: 'zhangsan', avatar: '', createTime: '2026-01-10 09:00:00', authProducts: 2, expireType: 'permanent', expireDate: '', expireTime: '永久', status: true, productAuths: { 'P001': 'admin', 'P002': 'operator' } },
+  { id: 'M002', name: '李四', account: 'lisi', avatar: '', createTime: '2026-02-15 14:00:00', authProducts: 1, expireType: 'custom', expireDate: '2026-12-31', expireTime: '2026-12-31 23:59:59', status: true, productAuths: { 'P001': 'user' } },
+  { id: 'M003', name: '王五', account: 'wangwu', avatar: '', createTime: '2026-03-01 11:00:00', authProducts: 1, expireType: 'custom', expireDate: '2026-03-15', expireTime: '2026-03-15 23:59:59', status: false, productAuths: { 'P002': '' } },
+  { id: 'M004', name: '赵六', account: 'zhaoliu', avatar: '', createTime: '2026-03-20 08:30:00', authProducts: 2, expireType: 'permanent', expireDate: '', expireTime: '永久', status: true, productAuths: { 'P001': 'admin', 'P002': 'admin' } },
+  { id: 'M005', name: '钱七', account: 'qianqi', avatar: '', createTime: '2026-04-01 16:00:00', authProducts: 1, expireType: 'custom', expireDate: '2027-04-01', expireTime: '2027-04-01 23:59:59', status: true, productAuths: { 'P001': 'operator' } },
+]
+
+export const roles = [
+  { id: 'R001', name: '超级管理员', desc: '系统最高权限', memberCount: 2, belong: '实验室', creator: 'system', createTime: '2026-01-01 00:00:00', status: true, builtin: true },
+  { id: 'R002', name: '只读角色', desc: '市场营销人员', memberCount: 3, belong: '实验室', creator: 'zhangsan', createTime: '2026-01-15 10:00:00', status: true, builtin: false },
+  { id: 'R003', name: '智马翻译管理员', desc: '翻译产品线管理', memberCount: 5, belong: '实验室', creator: 'zhangsan', createTime: '2026-02-01 09:00:00', status: true, builtin: false },
+  { id: 'R004', name: '智马漫影管理员', desc: '漫影产品线管理', memberCount: 3, belong: '实验室', creator: 'zhangsan', createTime: '2026-02-10 11:00:00', status: true, builtin: false },
+  { id: 'R005', name: '代理商角色', desc: '渠道代理权限', memberCount: 2, belong: '马投科技', creator: 'lisi', createTime: '2026-03-01 14:00:00', status: true, builtin: false },
+]
+
+export const users = [
+  { id: 'U10001', name: '刘一', account: '13800001111', phone: '13800001111', productId: 'P001', tenants: ['T001'], tenantRoles: [{ tenant: 'T001', role: '翻译人员' }], role: '翻译人员', tags: ['VIP用户群', '活跃大客户'], expireTime: '永久', createTime: '2026-01-20 08:00:00', status: true, totalSpend: 2580.00, balance: 1200, preDeductLimit: 5000, orders: 12, channelId: null },
+  { id: 'matou_12345', name: '张三', account: '13800123456', phone: '13800123456', productId: 'P001', tenants: ['T001'], tenantRoles: [{ tenant: 'T001', role: '管理员' }], role: '翻译人员', tags: ['VIP用户群'], expireTime: '永久', createTime: '2026-02-15 10:30:00', status: true, totalSpend: 15800.00, balance: 5000, preDeductLimit: 10000, orders: 28, channelId: null },
+  { id: 'U10003', name: '周三', account: '13800003333', phone: '13800003333', productId: 'P001', tenants: ['T003'], tenantRoles: [{ tenant: 'T003', role: '翻译人员' }], role: '翻译人员', tags: ['新注册用户'], expireTime: '2026-07-20', createTime: '2026-03-10 15:00:00', status: true, totalSpend: 99.00, balance: 800, preDeductLimit: 2000, orders: 1, channelId: 'T001' },
+  { id: 'U10004', name: '吴四', account: '13800004444', phone: '13800004444', productId: 'P001', tenants: ['T002', 'T003'], tenantRoles: [{ tenant: 'T002', role: '校对人员' }, { tenant: 'T003', role: '管理员' }], role: '校对人员', tags: ['VIP用户群', '活跃大客户'], expireTime: '永久', createTime: '2026-01-05 09:30:00', status: true, totalSpend: 45200.00, balance: 8000, preDeductLimit: 15000, orders: 86, channelId: 'T001' },
+  { id: 'U10005', name: '郑五', account: '13800005555', phone: '13800005555', productId: 'P001', tenants: ['T002'], tenantRoles: [{ tenant: 'T002', role: '翻译人员' }], role: '翻译人员', tags: [], expireTime: '2026-04-30', createTime: '2026-04-01 12:00:00', status: false, totalSpend: 0, balance: 0, preDeductLimit: 1000, orders: 0, channelId: 'T001' },
+  { id: 'U10006', name: '孙六', account: '13800006666', phone: '13800006666', productId: 'P002', tenants: ['T004'], tenantRoles: [{ tenant: 'T004', role: '管理员' }], role: '管理员', tags: ['漫影VIP'], expireTime: '永久', createTime: '2026-03-01 12:00:00', status: true, totalSpend: 12000.00, balance: 3000, orders: 20, channelId: null },
+  { id: 'U10007', name: '钱七', account: '13800007777', phone: '13800007777', productId: 'P002', tenants: ['T004'], tenantRoles: [{ tenant: 'T004', role: '翻译人员' }], role: '翻译人员', tags: ['漫影新用户'], expireTime: '2026-08-15', createTime: '2026-04-01 10:00:00', status: true, totalSpend: 2800.00, balance: 800, orders: 8, channelId: 'T003' },
+  { id: 'U10008', name: '林八', account: '13800008888', phone: '13800008888', productId: 'P002', tenants: ['T004'], tenantRoles: [{ tenant: 'T004', role: '校对人员' }], role: '校对人员', tags: ['漫影VIP'], expireTime: '永久', createTime: '2026-02-15 14:00:00', status: true, totalSpend: 5600.00, balance: 1500, orders: 15, channelId: 'T003' },
+]
+export const tenants = [
+  // 团队用户/运营方/大客户
+  { id: 'T001', name: '马投科技', type: '运营方', deductionMethod: '先扣费', preDeductLimit: 100000, productId: 'P001', totalSpend: 128000, userCount: 35, expireTime: '2027-06-30 23:59:59', settlement: '预充权益', cycle: '', settlementDay: null, shareRatio: 20, balance: 50000, createTime: '2026-01-10 10:00:00', sso: true, channelTag: 'matou', status: true, inviteCode: 'QDABC123', invoiceTitle: '马投科技有限公司', invoiceTaxNo: '91430100MA4PXXXXXX', channelId: null },
+  { id: 'T002', name: '星辰教育', type: '团队用户', deductionMethod: '先扣费', preDeductLimit: 50000, productId: 'P001', totalSpend: 89000, userCount: 120, expireTime: '永久', settlement: '预充权益', cycle: '', settlementDay: null, shareRatio: 0, balance: 30000, createTime: '2026-02-01 09:00:00', sso: false, channelTag: '', status: true, invoiceTitle: '星辰教育科技有限公司', invoiceTaxNo: '91110108MA00XXXXXX', channelId: 'T001' },
+  { id: 'T003', name: '环球译联', type: '运营方', deductionMethod: '先扣费', preDeductLimit: 80000, productId: 'P001', totalSpend: 56000, userCount: 18, expireTime: '2026-12-31 23:59:59', settlement: '预充权益', cycle: '', settlementDay: null, shareRatio: 15, balance: 12000, createTime: '2026-03-15 14:30:00', sso: false, channelTag: 'huanqiu', status: true, inviteCode: 'QDDEF456', invoiceTitle: '环球译联文化传播有限公司', invoiceTaxNo: '91310115MA1KXXXXXX', channelId: null },
+  { id: 'T004', name: '智马漫影科技', type: '运营方', deductionMethod: '先扣费', preDeductLimit: 30000, productId: 'P002', totalSpend: 45000, userCount: 25, expireTime: '永久', settlement: '按量计费', cycle: '月结', settlementDay: 10, shareRatio: 25, balance: 15000, createTime: '2026-03-01 09:00:00', sso: false, channelTag: 'manying', status: true, inviteCode: 'QDMY789', invoiceTitle: '智马漫影科技有限公司', invoiceTaxNo: '91440300MA5GXXXXXX', channelId: null },
+  { id: 'T005', name: '大客户A公司', type: '大客户', deductionMethod: '导出后扣费', preDeductLimit: 500000, productId: 'P001', totalSpend: 256000, userCount: 500, expireTime: '永久', settlement: '按量计费', cycle: '月结', settlementDay: 10, shareRatio: 0, balance: 100000, createTime: '2026-04-01 09:00:00', sso: true, channelTag: '', status: true, invoiceTitle: '大客户A有限公司', invoiceTaxNo: '91110000MA00XXXXXX', channelId: 'T003' },
+  { id: 'T006', name: '漫影创意工作室', type: '团队用户', deductionMethod: '先扣费', preDeductLimit: 20000, productId: 'P002', totalSpend: 35000, userCount: 15, expireTime: '永久', settlement: '预充权益', cycle: '', settlementDay: null, shareRatio: 0, balance: 8000, createTime: '2026-03-15 10:00:00', sso: false, channelTag: '', status: true, invoiceTitle: '漫影创意工作室', invoiceTaxNo: '91440300MA5GYYYYYY', channelId: 'T004' },
+]
+
+export const orders = [
+  // 待确认订单（对公转账，等待财务确认）
+  { id: 'ZM20260508011', userId: 'U10002', userAccount: '13800002222', tenant: '马投科技', userName: '陈二', productName: '智马翻译', goodsName: '商务合作结算', goodsType: '结算', skuName: '商务合作结算', points: '10000点', receivedPoints: '—', receivedTenant: '马投科技', originalPrice: 5000.00, discountAmount: 500.00, orderTime: '2026-05-08 14:30:00', status: '待确认', rightsStatus: '待发放', payMethod: '对公转账', amount: 5000.00, actualAmount: 4500.00, commission: 0, netAmount: 0, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '', refundDeadline: '2026-06-08', transactionId: '', source: 'manual', channelSource: '直接注册', pendingConfirm: true },
+  // 已完成：订单已完成（权益已用完或过期）
+  { id: 'ZM20260401001', userId: 'U10001', userAccount: '13800001111', tenant: '刘一', userName: '刘一', productName: '智马翻译', goodsName: '翻译点数包', goodsType: '点数包', skuName: '500点套餐', points: '500点', receivedPoints: '500点', receivedTenant: '刘一', originalPrice: 129.00, discountAmount: 30.00, orderTime: '2026-04-01 10:30:00', status: '已完成', rightsStatus: '已用完', payMethod: '微信支付', amount: 99.00, actualAmount: 99.00, commission: 2.97, netAmount: 96.03, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '', refundDeadline: '2026-05-01', transactionId: 'WX20260401103000001', source: 'online', channelSource: '直接注册' },
+  // 已支付：支付成功（权益发放中，具体状态看权益状态列）
+  { id: 'ZM20260405002', userId: 'U10002', userAccount: '13800002222', tenant: '马投科技', userName: '陈二', productName: '智马翻译', goodsName: 'VIP会员', goodsType: '会员', skuName: '年度VIP', points: '365天', receivedPoints: '365天', receivedTenant: '马投科技', originalPrice: 2499.00, discountAmount: 500.00, orderTime: '2026-04-05 14:20:00', status: '已支付', rightsStatus: '生效中', payMethod: '支付宝', amount: 1999.00, actualAmount: 1999.00, commission: 19.99, netAmount: 1979.01, shareAmount: '399.80', invoiceStatus: '已开票', invoiceRedeemed: false, refundStatus: '', refundDeadline: '2026-05-05', transactionId: 'ALI20260405142000002', source: 'online', channelSource: '马投科技' },
+  { id: 'ZM20260410003', userId: 'U10004', userAccount: '13800004444', tenant: '星辰教育', userName: '吴四', productName: '智马翻译', goodsName: '翻译点数包', goodsType: '点数包', skuName: '2000点套餐', points: '2000点', receivedPoints: '2000点', receivedTenant: '星辰教育', originalPrice: 399.00, discountAmount: 50.00, orderTime: '2026-04-10 09:15:00', status: '已支付', rightsStatus: '生效中', payMethod: '微信支付', amount: 349.00, actualAmount: 349.00, commission: 10.47, netAmount: 338.53, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '', refundDeadline: '2026-05-10', transactionId: 'WX20260410091500003', source: 'online', channelSource: '马投科技' },
+  // 待支付：未付款
+  { id: 'MY20260415004', userId: 'U10003', userAccount: '13800003333', tenant: '周三', userName: '周三', productName: '智马漫影', goodsName: '生成次数包', goodsType: '次数包', skuName: '100次套餐', points: '100次', receivedPoints: '—', receivedTenant: '周三', originalPrice: 199.00, discountAmount: 0, orderTime: '2026-04-15 16:45:00', status: '待支付', rightsStatus: '未支付', payMethod: '', amount: 199.00, actualAmount: 0, commission: 0, netAmount: 0, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '', refundDeadline: '', transactionId: '', source: 'online', channelSource: '环球译联' },
+  // 已关闭：超时未支付、用户取消、退款完成
+  { id: 'MY20260417008', userId: 'U10002', userAccount: '13800002222', tenant: '马投科技', userName: '陈二', productName: '智马漫影', goodsName: '生成次数包', goodsType: '次数包', skuName: '50次套餐', points: '50次', receivedPoints: '—', receivedTenant: '马投科技', originalPrice: 99.00, discountAmount: 0, orderTime: '2026-04-17 14:00:00', status: '已关闭', rightsStatus: '已关闭', payMethod: '', amount: 99.00, actualAmount: 0, commission: 0, netAmount: 0, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '', refundDeadline: '', transactionId: '', source: 'online', channelSource: '直接注册' },
+  // 已关闭：退款完成
+  { id: 'ZM20260418005', userId: 'U10001', userAccount: '13800001111', tenant: '刘一', userName: '刘一', productName: '智马翻译', goodsName: '翻译点数包', goodsType: '点数包', skuName: '1000点套餐', points: '1000点', receivedPoints: '1000点', receivedTenant: '刘一', originalPrice: 199.00, discountAmount: 20.00, orderTime: '2026-04-18 11:00:00', status: '已关闭', rightsStatus: '已退回', payMethod: '微信支付', amount: 179.00, actualAmount: 179.00, commission: 5.37, netAmount: 173.63, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '退款成功', refundDeadline: '2026-05-18', transactionId: 'WX20260418110000005', source: 'online', channelSource: '直接注册' },
+  // 已支付 + 退款中（退款状态单独显示）
+  { id: 'ZM20260419009', userId: 'U10004', userAccount: '13800004444', tenant: '星辰教育', userName: '吴四', productName: '智马翻译', goodsName: '翻译点数包', goodsType: '点数包', skuName: '500点套餐', points: '500点', receivedPoints: '—', receivedTenant: '星辰教育', originalPrice: 129.00, discountAmount: 0, orderTime: '2026-04-19 16:00:00', status: '已支付', rightsStatus: '冻结中', payMethod: '微信支付', amount: 129.00, actualAmount: 129.00, commission: 3.87, netAmount: 125.13, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '退款中', refundDeadline: '2026-05-19', transactionId: 'WX20260419160000009', source: 'online', channelSource: '马投科技' },
+  // 已关闭：退款异常
+  { id: 'MY20260421010', userId: 'U10003', userAccount: '13800003333', tenant: '周三', userName: '周三', productName: '智马漫影', goodsName: '生成次数包', goodsType: '次数包', skuName: '100次套餐', points: '100次', receivedPoints: '—', receivedTenant: '周三', originalPrice: 199.00, discountAmount: 0, orderTime: '2026-04-21 10:00:00', status: '已关闭', rightsStatus: '异常', payMethod: '支付宝', amount: 199.00, actualAmount: 199.00, commission: 1.99, netAmount: 197.01, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '退款异常', refundDeadline: '2026-05-21', transactionId: 'ALI20260421100000010', source: 'online', channelSource: '环球译联' },
+  // 已完成
+  { id: 'ZM20260420006', userId: 'U10001', userAccount: '13800001111', tenant: '马投科技', userName: '刘一', productName: '智马翻译', goodsName: '商务合作结算', goodsType: '结算', skuName: '商务合作结算', points: '5000点', receivedPoints: '5000点', receivedTenant: '马投科技', originalPrice: 0, discountAmount: 0, orderTime: '2026-04-20 14:00:00', status: '已完成', rightsStatus: '已用完', payMethod: '线下转账', amount: 0, actualAmount: 0, commission: 0, netAmount: 0, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '', refundDeadline: '2026-05-20', transactionId: '', source: 'manual', channelSource: '马投科技' },
+  // 发放失败示例订单
+  { id: 'ZM20260422011', userId: 'U10002', userAccount: '13800002222', tenant: '马投科技', userName: '陈二', productName: '智马翻译', goodsName: '翻译点数包', goodsType: '点数包', skuName: '500点套餐', points: '500点', receivedPoints: '—', receivedTenant: '马投科技', originalPrice: 99.00, discountAmount: 0, orderTime: '2026-04-22 10:00:00', status: '已支付', rightsStatus: '发放失败', payMethod: '微信支付', amount: 99.00, actualAmount: 99.00, commission: 2.97, netAmount: 96.03, shareAmount: '—', invoiceStatus: '未开票', refundStatus: '', refundDeadline: '2026-05-22', transactionId: 'WX20260422100000011', source: 'online', channelSource: '直接注册' },
+]
+
+export const spuList = [
+  { id: 'SPU001', name: '翻译点数包', productId: 'P001', payType: '单次支付', createTime: '2026-01-20 10:00:00', skuCount: 4, sales: 128000, listed: true, status: true, priority: '快过期优先', skuLimit: 10 },
+  { id: 'SPU002', name: 'VIP会员', productId: 'P001', payType: '周期付款', createTime: '2026-01-25 14:00:00', skuCount: 3, sales: 89000, listed: true, status: true, priority: '按等级顺序消费', skuLimit: 5 },
+  { id: 'SPU003', name: '生成次数包', productId: 'P002', payType: '单次支付', createTime: '2026-02-20 11:00:00', skuCount: 3, sales: 56000, listed: true, status: true, priority: '先进先出', skuLimit: 8 },
+]
+
+export const skuList = [
+  { id: 'SKU001', name: '300点套餐', code: 'ZM-TR-300', price: 59.00, createTime: '2026-01-22 10:00:00', status: '已上架', visibility: '全部可见', spu: '翻译点数包', productId: 'P001', validDays: 90, traded: 320, sales: 18880, points: 300 },
+  { id: 'SKU002', name: '500点套餐', code: 'ZM-TR-500', price: 99.00, createTime: '2026-01-22 11:00:00', status: '已上架', visibility: '全部可见', spu: '翻译点数包', productId: 'P001', validDays: 180, traded: 580, sales: 57420, points: 500 },
+  { id: 'SKU003', name: '2000点套餐', code: 'ZM-TR-2000', price: 349.00, createTime: '2026-01-22 12:00:00', status: '已下架', visibility: '全部可见', spu: '翻译点数包', productId: 'P001', validDays: 365, traded: 150, sales: 52350, points: 2000 },
+  { id: 'SKU004', name: '月度VIP', code: 'ZM-VIP-M', price: 29.90, createTime: '2026-01-26 10:00:00', status: '已上架', visibility: '全部可见', spu: 'VIP会员', productId: 'P001', validDays: 30, traded: 1200, sales: 35880, points: '不限' },
+  { id: 'SKU005', name: '年度VIP', code: 'ZM-VIP-Y', price: 199.00, createTime: '2026-01-26 11:00:00', status: '已上架', visibility: '全部可见', spu: 'VIP会员', productId: 'P001', validDays: 365, traded: 280, sales: 55720, points: '不限' },
+  { id: 'SKU006', name: '50次套餐', code: 'ZM-MY-50', price: 99.00, createTime: '2026-02-22 10:00:00', status: '已上架', visibility: '全部可见', spu: '生成次数包', productId: 'P002', validDays: 90, traded: 210, sales: 20790, points: 50 },
+  { id: 'SKU007', name: '100次套餐', code: 'ZM-MY-100', price: 199.00, createTime: '2026-02-22 11:00:00', status: '已上架', visibility: '全部可见', spu: '生成次数包', productId: 'P002', validDays: 180, traded: 165, sales: 32835, points: 100 },
+  { id: 'SKU008', name: '新客体验包', code: 'ZM-TR-NEW', price: 9.90, createTime: '2026-03-01 09:00:00', status: '已下架', visibility: '部分可见', spu: '翻译点数包', productId: 'P001', validDays: 7, traded: 50, sales: 495, points: 50 },
+]
+
+// 商品类型
+
+// 用户分群
+export const userGroups = [
+  { id: 'G001', name: 'VIP用户群', productId: 'P001', userCount: 2, creator: '张三', createTime: '2026-03-15 10:00:00', updateTime: '2026-04-10 14:30:00', conditions: [{ tag: 'VIP', operator: '等于', value: 'true' }] },
+  { id: 'G002', name: '活跃大客户', productId: 'P001', userCount: 1, creator: '李四', createTime: '2026-03-20 11:00:00', updateTime: '2026-04-18 09:00:00', conditions: [{ tag: '活跃用户', operator: '等于', value: 'true', relation: 'AND' }, { tag: '大客户', operator: '等于', value: 'true' }] },
+  { id: 'G003', name: '新注册用户', productId: 'P001', userCount: 1, creator: '张三', createTime: '2026-04-01 09:00:00', updateTime: '2026-04-20 16:00:00', conditions: [{ tag: '新用户', operator: '等于', value: 'true' }] },
+  { id: 'G004', name: '漫影VIP', productId: 'P002', userCount: 3, creator: '王五', createTime: '2026-03-10 10:00:00', updateTime: '2026-04-15 14:30:00', conditions: [{ tag: 'VIP', operator: '等于', value: 'true' }] },
+  { id: 'G005', name: '漫影新用户', productId: 'P002', userCount: 2, creator: '赵六', createTime: '2026-03-25 11:00:00', updateTime: '2026-04-19 09:00:00', conditions: [{ tag: '新用户', operator: '等于', value: 'true' }] },
+]
+
+export const redeemCodes = [
+  { id: 'RC001', batchName: '大客户促销A', batchId: 'BATCH20260301', skuName: '新客体验包', skuCode: 'ZM-TR-NEW', createTime: '2026-03-01 15:00:00', total: 500, redeemed: 128, validPeriod: '2026-03-01 至 2026-06-30', status: '进行中', creator: '张三' },
+  { id: 'RC002', batchName: '渠道推广B', batchId: 'BATCH20260315', skuName: '新客体验包', skuCode: 'ZM-TR-NEW', createTime: '2026-03-15 10:00:00', total: 200, redeemed: 200, validPeriod: '2026-03-15 至 2026-04-15', status: '已兑完', creator: '李四' },
+  { id: 'RC003', batchName: '内部测试C', batchId: 'BATCH20260401', skuName: '300点套餐', skuCode: 'ZM-TR-300', createTime: '2026-04-01 09:00:00', total: 50, redeemed: 5, validPeriod: '2026-04-01 至 2026-05-01', status: '进行中', creator: '王五' },
+]
+
+// 能力定义（featureId 唯一）
+export const features = [
+  { id: 'F001', featureId: 1001, name: '翻译分钟数', desc: '语音翻译消耗的分钟数额度', productId: 'P001', status: true },
+  { id: 'F002', featureId: 1002, name: '文档翻译', desc: '文档翻译次数', productId: 'P001', status: true },
+  { id: 'F003', featureId: 1003, name: '实时翻译', desc: '实时语音翻译功能', productId: 'P001', status: false },
+  { id: 'F004', featureId: 2001, name: '漫画生成', desc: 'AI漫画生成次数', productId: 'P002', status: true },
+  { id: 'F005', featureId: 2002, name: '视频生成', desc: 'AI视频生成次数', productId: 'P002', status: true },
+]
+
+// 能力定价配置（按 featureId + apiModel + model 组合）
+export const featurePricing = [
+  { id: 'FP001', featureId: 1001, apiModel: 'Nano-Banana-Pro', model: '2K', listPrice: 0.20, costPrice: 0.12, status: true },
+  { id: 'FP002', featureId: 1001, apiModel: 'Nano-Banana-Pro', model: '4K', listPrice: 0.30, costPrice: 0.18, status: true },
+  { id: 'FP003', featureId: 1002, apiModel: 'Gemini-2.5-Pro', model: '', listPrice: 0.15, costPrice: 0.08, status: true },
+  { id: 'FP004', featureId: 1003, apiModel: 'GPT-4o-Realtime', model: '', listPrice: 0.25, costPrice: 0.15, status: false },
+  { id: 'FP005', featureId: 2001, apiModel: 'Sora-Image', model: '', listPrice: 3.50, costPrice: 2.50, status: true },
+  { id: 'FP006', featureId: 2002, apiModel: 'Veo-3.1-Fast-Preview', model: '含音频', listPrice: 7.00, costPrice: 5.00, status: true },
+  { id: 'FP007', featureId: 2002, apiModel: 'Veo-3.1-Fast-Preview', model: '不含音频', listPrice: 5.00, costPrice: 3.50, status: true },
+]
+
+export const invoices = [
+  { id: 'INV001', invoiceNo: 'FP20260410001', type: '增值税普通发票', orderId: 'ORD20260405002', buyerName: '马投科技', buyerType: '企业', buyerTax: '91430100XXXXXXXX', applyTime: '2026-04-10 15:00:00', amount: 1999.00, issueTime: '2026-04-10 17:00:00', status: '开票成功' },
+  { id: 'INV002', invoiceNo: '', type: '增值税普通发票', orderId: 'ORD20260401001', buyerName: '刘一', buyerType: '个人', buyerTax: '', applyTime: '2026-04-20 10:00:00', amount: 99.00, issueTime: '', status: '开票中' },
+]
+
+export const sendTasks = [
+  { id: 'TASK001', name: '春季促销通知', type: '立即发送', method: '短信', template: '春季促销模板', targetCount: '320/500', status: '已完成', createTime: '2026-04-01 10:00:00' },
+  { id: 'TASK002', name: '系统升级公告', type: '定时发送', method: '邮件', template: '系统通知模板', targetCount: '0/1200', status: '待执行', createTime: '2026-04-15 14:00:00' },
+  { id: 'TASK003', name: 'VIP续费提醒', type: '定时发送', method: '短信', template: '续费提醒模板', targetCount: '85/150', status: '执行中', createTime: '2026-04-18 09:00:00' },
+]
+
+export const operationLogs = [
+  { time: '2026-04-20 10:30:00', operatorId: 'M001', operatorAccount: 'zhangsan', operatorName: '张三', system: '成员管理', type: 'CREATE', target: '后台成员', ip: '192.168.1.100', desc: '创建成员 钱七' },
+  { time: '2026-04-20 09:15:00', operatorId: 'M002', operatorAccount: 'lisi', operatorName: '李四', system: '订单管理', type: 'UPDATE', target: '订单', ip: '192.168.1.101', desc: '订单 ORD20260418005 退款操作' },
+  { time: '2026-04-19 16:45:00', operatorId: 'M001', operatorAccount: 'zhangsan', operatorName: '张三', system: '商品管理', type: 'CREATE', target: 'SKU', ip: '192.168.1.100', desc: '新建SKU：新客体验包' },
+  { time: '2026-04-19 14:00:00', operatorId: 'M004', operatorAccount: 'zhaoliu', operatorName: '赵六', system: '通知管理', type: 'CREATE', target: '通知任务', ip: '192.168.1.102', desc: '创建发送任务：VIP续费提醒' },
+  { time: '2026-04-18 11:00:00', operatorId: 'M001', operatorAccount: 'zhangsan', operatorName: '张三', system: '用户管理', type: 'DISABLE', target: '用户', ip: '192.168.1.100', desc: '禁用用户 郑五(U10005)' },
+]
+
+// 用户点数明细记录（真实产品格式）
+export const userPointsLogs = [
+  { id: 'PL001', userId: 'matou_12345', taskType: '视频翻译', projectName: '产品宣传片系列', videoName: '智马翻译产品介绍.mp4', processTask: '英译中+字幕生成', videoDuration: '03:45', translateStartTime: '2026-04-20 09:30:00', projectId: 'PRJ20240420001', totalPoints: 225, actualPoints: 225 },
+  { id: 'PL002', userId: 'matou_12345', taskType: '视频校对', projectName: '产品宣传片系列', videoName: '智马翻译产品介绍.mp4', processTask: '字幕校对', videoDuration: '03:45', translateStartTime: '2026-04-20 10:15:00', projectId: 'PRJ20240420001', totalPoints: 45, actualPoints: 45 },
+  { id: 'PL003', userId: 'matou_12345', taskType: '视频翻译', projectName: '客户培训教程', videoName: '入门操作指南.mp4', processTask: '中译英+配音', videoDuration: '12:30', translateStartTime: '2026-04-21 14:00:00', projectId: 'PRJ20240421002', totalPoints: 750, actualPoints: 750 },
+  { id: 'PL004', userId: 'matou_12345', taskType: '视频翻译', projectName: '海外推广素材', videoName: '功能演示视频.mp4', processTask: '英译日+字幕', videoDuration: '05:20', translateStartTime: '2026-04-22 11:20:00', projectId: 'PRJ20240422003', totalPoints: 320, actualPoints: 320 },
+  { id: 'PL005', userId: 'matou_12345', taskType: '视频翻译', projectName: '海外推广素材', videoName: '用户案例分享.mp4', processTask: '中译英+字幕', videoDuration: '08:15', translateStartTime: '2026-04-22 16:45:00', projectId: 'PRJ20240422003', totalPoints: 495, actualPoints: 495 },
+  { id: 'PL006', userId: 'U10001', taskType: '视频翻译', projectName: '内部培训资料', videoName: '销售技巧培训.mp4', processTask: '中译英+字幕', videoDuration: '25:00', translateStartTime: '2026-04-18 09:00:00', projectId: 'PRJ20240418004', totalPoints: 1500, actualPoints: 1500 },
+  { id: 'PL007', userId: 'U10001', taskType: '视频校对', projectName: '内部培训资料', videoName: '销售技巧培训.mp4', processTask: '字幕校对', videoDuration: '25:00', translateStartTime: '2026-04-19 10:30:00', projectId: 'PRJ20240418004', totalPoints: 300, actualPoints: 300 },
+  { id: 'PL008', userId: 'U10001', taskType: '视频翻译', projectName: '会议记录整理', videoName: '季度总结会议.mp4', processTask: '语音识别+中译英', videoDuration: '45:30', translateStartTime: '2026-04-19 14:00:00', projectId: 'PRJ20240419005', totalPoints: 2730, actualPoints: 2730 },
+  { id: 'PL009', userId: 'U10003', taskType: '视频翻译', projectName: '产品发布视频', videoName: '新品发布会.mp4', processTask: '中译英+字幕+配音', videoDuration: '30:00', translateStartTime: '2026-04-23 09:00:00', projectId: 'PRJ20240423006', totalPoints: 1800, actualPoints: 1800 },
+  { id: 'PL010', userId: 'U10004', taskType: '视频翻译', projectName: '客户案例视频', videoName: '成功案例访谈.mp4', processTask: '英译中+字幕', videoDuration: '15:45', translateStartTime: '2026-04-24 13:30:00', projectId: 'PRJ20240424007', totalPoints: 945, actualPoints: 945 },
+  { id: 'PL011', userId: 'matou_12345', taskType: '视频翻译', projectName: '营销素材制作', videoName: '社交媒体推广.mp4', processTask: '中译日+字幕', videoDuration: '02:30', translateStartTime: '2026-04-25 10:00:00', projectId: 'PRJ20240425008', totalPoints: 150, actualPoints: 150 },
+  { id: 'PL012', userId: 'matou_12345', taskType: '视频校对', projectName: '营销素材制作', videoName: '社交媒体推广.mp4', processTask: '字幕校对', videoDuration: '02:30', translateStartTime: '2026-04-25 11:00:00', projectId: 'PRJ20240425008', totalPoints: 30, actualPoints: 30 },
+  { id: 'PL013', userId: 'U10001', taskType: '视频翻译', projectName: '技术文档视频', videoName: 'API使用教程.mp4', processTask: '中译英+字幕', videoDuration: '18:20', translateStartTime: '2026-04-25 15:00:00', projectId: 'PRJ20240425009', totalPoints: 1100, actualPoints: 1100 },
+  { id: 'PL014', userId: 'U10003', taskType: '视频翻译', projectName: '培训视频制作', videoName: '新员工入职培训.mp4', processTask: '中译英+配音', videoDuration: '35:00', translateStartTime: '2026-04-26 09:30:00', projectId: 'PRJ20240426010', totalPoints: 2100, actualPoints: 2100 },
+  { id: 'PL015', userId: 'U10004', taskType: '视频翻译', projectName: '品牌宣传视频', videoName: '企业文化宣传片.mp4', processTask: '中译英+字幕+配音', videoDuration: '10:00', translateStartTime: '2026-04-26 14:00:00', projectId: 'PRJ20240426011', totalPoints: 600, actualPoints: 600 },
+]
+
+// 用户消费订单记录（消耗购买订单获得的权益值）
+export const consumptions = [
+  { id: 'C20260405001', userId: 'U10001', userName: '刘一', userAccount: '13800001111', productName: '智马翻译', orderId: 'ORD20260401001', orderSku: '500点套餐', consumePoints: 50, serviceType: '文档翻译', businessId: 'TASK-DOC-001', businessName: '用户手册翻译任务', status: '已使用', createTime: '2026-04-05 14:20:00' },
+  { id: 'C20260418001', userId: 'U10001', userName: '刘一', userAccount: '13800001111', productName: '智马翻译', orderId: 'ORD20260418005', orderSku: '1000点套餐', consumePoints: 200, serviceType: '实时翻译', businessId: 'CALL-LIVE-002', businessName: '在线会议实时翻译', status: '已使用', createTime: '2026-04-18 15:30:00' },
+  { id: 'C20260410001', userId: 'matou_12345', userName: '张三', userAccount: '13800123456', productName: '智马翻译', orderId: 'ORD20260405002', orderSku: '年度VIP', consumePoints: 500, serviceType: '批量翻译', businessId: 'PROJ-003', businessName: '产品说明书批量翻译', status: '已使用', createTime: '2026-04-10 10:00:00' },
+  { id: 'C20260420001', userId: 'U10004', userName: '吴四', userAccount: '13800004444', productName: '智马翻译', orderId: 'ORD20260410003', orderSku: '2000点套餐', consumePoints: 800, serviceType: '文档翻译', businessId: 'TASK-DOC-004', businessName: '合同文件翻译', status: '已使用', createTime: '2026-04-20 09:15:00' },
+  { id: 'C20260422001', userId: 'U10003', userName: '周三', userAccount: '13800003333', productName: '智马漫影', orderId: 'ORD20260415004', orderSku: '100次套餐', consumePoints: 30, serviceType: '漫画生成', businessId: 'COMIC-005', businessName: '营销漫画生成', status: '使用中', createTime: '2026-04-22 16:45:00' },
+]
+
+// 充值订单（租户充值记录）
+export const rechargeOrders = [
+  { id: 'RCH20260301001', tenantId: 'T001', tenantName: '马投科技', productName: '智马翻译', rechargeType: '权益充值', rechargePoints: 10000, unitPrice: 0.10, originalAmount: 1000.00, discountAmount: 100.00, actualAmount: 900.00, payMethod: '银行转账', status: '已完成', operator: '张三', createTime: '2026-03-01 10:00:00', completeTime: '2026-03-01 10:30:00', remark: '首次充值' },
+  { id: 'RCH20260315001', tenantId: 'T002', tenantName: '星辰教育', productName: '智马翻译', rechargeType: '权益充值', rechargePoints: 20000, unitPrice: 0.08, originalAmount: 1600.00, discountAmount: 0, actualAmount: 1600.00, payMethod: '支付宝', status: '已完成', operator: '张三', createTime: '2026-03-15 14:00:00', completeTime: '2026-03-15 14:20:00', remark: '' },
+  { id: 'RCH20260401001', tenantId: 'T001', tenantName: '马投科技', productName: '智马翻译', rechargeType: '权益充值', rechargePoints: 50000, unitPrice: 0.10, originalAmount: 5000.00, discountAmount: 500.00, actualAmount: 4500.00, payMethod: '银行转账', status: '已完成', operator: '李四', createTime: '2026-04-01 09:30:00', completeTime: '2026-04-01 10:00:00', remark: '季度充值' },
+  { id: 'RCH20260410001', tenantId: 'T003', tenantName: '环球译联', productName: '智马翻译', rechargeType: '权益充值', rechargePoints: 15000, unitPrice: 0.09, originalAmount: 1350.00, discountAmount: 50.00, actualAmount: 1300.00, payMethod: '微信支付', status: '已完成', operator: '张三', createTime: '2026-04-10 11:00:00', completeTime: '2026-04-10 11:15:00', remark: '' },
+  { id: 'RCH20260420001', tenantId: 'T001', tenantName: '马投科技', productName: '智马翻译', rechargeType: '权益充值', rechargePoints: 30000, unitPrice: 0.10, originalAmount: 3000.00, discountAmount: 300.00, actualAmount: 2700.00, payMethod: '银行转账', status: '待确认', operator: '张三', createTime: '2026-04-20 16:00:00', completeTime: '', remark: '月度补充' },
+  { id: 'RCH20260425001', tenantId: 'T002', tenantName: '星辰教育', productName: '智马翻译', rechargeType: '权益充值', rechargePoints: 10000, unitPrice: 0.08, originalAmount: 800.00, discountAmount: 0, actualAmount: 800.00, payMethod: '支付宝', status: '已完成', operator: '李四', createTime: '2026-04-25 10:30:00', completeTime: '2026-04-25 10:30:00', remark: '' },
+  { id: 'RCH20260405001', tenantId: 'T004', tenantName: '智马漫影科技', productName: '智马漫影', rechargeType: '权益充值', rechargePoints: 5000, unitPrice: 0.20, originalAmount: 1000.00, discountAmount: 0, actualAmount: 1000.00, payMethod: '银行转账', status: '已完成', operator: '张三', createTime: '2026-04-05 09:00:00', completeTime: '2026-04-05 09:30:00', remark: '' },
+  { id: 'RCH20260428001', tenantId: 'T003', tenantName: '环球译联', productName: '智马翻译', rechargeType: '权益充值', rechargePoints: 8000, unitPrice: 0.09, originalAmount: 720.00, discountAmount: 0, actualAmount: 720.00, payMethod: '微信支付', status: '已关闭', operator: '张三', createTime: '2026-04-28 14:00:00', completeTime: '', remark: '取消充值' },
+]
+
+// 消费记录（平台所有消费流水）
+export const consumptionRecords = [
+  { id: 'CR20260405001', userId: 'U10001', userName: '刘一', userAccount: '13800001111', tenantName: '个人', productName: '智马翻译', serviceType: '文档翻译', consumePoints: 50, consumeAmount: 5.00, balanceBefore: 500, balanceAfter: 450, businessId: 'TASK-DOC-001', businessName: '用户手册翻译任务', createTime: '2026-04-05 14:20:00', translatedDuration: 120, exportedDuration: 100, translatedDurationWithDub: 0, exportedDurationWithDub: 0, dubDuration: 0, exportedDubDuration: 0, transTaskPoints: 50, dubTaskPoints: 0, exportRate: 83 },
+  { id: 'CR20260409001', userId: 'matou_12345', userName: '张三', userAccount: '13800123456', tenantName: '马投科技', productName: '智马翻译', serviceType: '批量翻译', consumePoints: 480, consumeAmount: 48.00, balanceBefore: 50000, balanceAfter: 49520, businessId: 'PROJ-002', businessName: '产品文档翻译', createTime: '2026-04-09 10:00:00', translatedDuration: 800, exportedDuration: 750, translatedDurationWithDub: 200, exportedDurationWithDub: 180, dubDuration: 120, exportedDubDuration: 100, transTaskPoints: 380, dubTaskPoints: 100, exportRate: 88, model: 'GPT-4o', modelVersion: 'turbo' },
+  { id: 'CR20260410001', userId: 'matou_12345', userName: '张三', userAccount: '13800123456', tenantName: '马投科技', productName: '智马翻译', serviceType: '批量翻译', consumePoints: 500, consumeAmount: 50.00, balanceBefore: 50000, balanceAfter: 49500, businessId: 'PROJ-003', businessName: '产品说明书批量翻译', createTime: '2026-04-10 10:00:00', translatedDuration: 800, exportedDuration: 750, translatedDurationWithDub: 200, exportedDurationWithDub: 180, dubDuration: 120, exportedDubDuration: 100, transTaskPoints: 400, dubTaskPoints: 100, exportRate: 88 },
+  { id: 'CR20260412001', userId: 'U10004', userName: '吴四', userAccount: '13800004444', tenantName: '星辰教育', productName: '智马翻译', serviceType: '文档翻译', consumePoints: 200, consumeAmount: 20.00, balanceBefore: 30000, balanceAfter: 29800, businessId: 'TASK-DOC-002', businessName: '教材翻译项目', createTime: '2026-04-12 09:30:00', translatedDuration: 400, exportedDuration: 380, translatedDurationWithDub: 0, exportedDurationWithDub: 0, dubDuration: 0, exportedDubDuration: 0, transTaskPoints: 200, dubTaskPoints: 0, exportRate: 95, model: 'DeepL Pro', modelVersion: 'v3' },
+  { id: 'CR20260415001', userId: 'U10006', userName: '孙六', userAccount: '13800006666', tenantName: '智马漫影科技', productName: '智马漫影', serviceType: '漫画生成', consumePoints: 10, consumeAmount: 2.00, balanceBefore: 15000, balanceAfter: 14990, businessId: 'COMIC-001', businessName: '品牌IP漫画生成', createTime: '2026-04-15 10:00:00', model: 'DALL-E 3', modelVersion: 'HD' },
+  { id: 'CR20260416001', userId: 'U10007', userName: '钱七', userAccount: '13800007777', tenantName: '智马漫影科技', productName: '智马漫影', serviceType: '视频生成', consumePoints: 30, consumeAmount: 6.00, balanceBefore: 800, balanceAfter: 770, businessId: 'VIDEO-001', businessName: '产品演示视频生成', createTime: '2026-04-16 14:30:00' },
+  { id: 'CR20260418001', userId: 'U10001', userName: '刘一', userAccount: '13800001111', tenantName: '个人', productName: '智马翻译', serviceType: '实时翻译', consumePoints: 200, consumeAmount: 20.00, balanceBefore: 450, balanceAfter: 250, businessId: 'CALL-LIVE-002', businessName: '在线会议实时翻译', createTime: '2026-04-18 15:30:00', translatedDuration: 0, exportedDuration: 0, translatedDurationWithDub: 300, exportedDurationWithDub: 280, dubDuration: 300, exportedDubDuration: 280, transTaskPoints: 100, dubTaskPoints: 100, exportRate: 93 },
+  { id: 'CR20260420001', userId: 'U10004', userName: '吴四', userAccount: '13800004444', tenantName: '星辰教育', productName: '智马翻译', serviceType: '文档翻译', consumePoints: 800, consumeAmount: 80.00, balanceBefore: 29800, balanceAfter: 29000, businessId: 'TASK-DOC-004', businessName: '合同文件翻译', createTime: '2026-04-20 09:15:00', translatedDuration: 1500, exportedDuration: 1400, translatedDurationWithDub: 500, exportedDurationWithDub: 480, dubDuration: 500, exportedDubDuration: 480, transTaskPoints: 600, dubTaskPoints: 200, exportRate: 90 },
+  { id: 'CR20260421001', userId: 'matou_12345', userName: '张三', userAccount: '13800123456', tenantName: '马投科技', productName: '智马翻译', serviceType: '批量翻译', consumePoints: 1200, consumeAmount: 120.00, balanceBefore: 49500, balanceAfter: 48300, businessId: 'PROJ-005', businessName: '营销素材批量翻译', createTime: '2026-04-21 11:00:00', translatedDuration: 2000, exportedDuration: 1900, translatedDurationWithDub: 800, exportedDurationWithDub: 750, dubDuration: 800, exportedDubDuration: 750, transTaskPoints: 900, dubTaskPoints: 300, exportRate: 89 },
+  { id: 'CR20260422001', userId: 'U10003', userName: '周三', userAccount: '13800003333', tenantName: '个人', productName: '智马漫影', serviceType: '漫画生成', consumePoints: 30, consumeAmount: 6.00, balanceBefore: 800, balanceAfter: 770, businessId: 'COMIC-005', businessName: '营销漫画生成', createTime: '2026-04-22 16:45:00' },
+  { id: 'CR20260424001', userId: 'U10008', userName: '林八', userAccount: '13800008888', tenantName: '智马漫影科技', productName: '智马漫影', serviceType: '视频生成', consumePoints: 50, consumeAmount: 10.00, balanceBefore: 1500, balanceAfter: 1450, businessId: 'VIDEO-003', businessName: '企业宣传片生成', createTime: '2026-04-24 15:00:00' },
+  { id: 'CR20260425001', userId: 'U10004', userName: '吴四', userAccount: '13800004444', tenantName: '星辰教育', productName: '智马翻译', serviceType: '实时翻译', consumePoints: 300, consumeAmount: 30.00, balanceBefore: 29000, balanceAfter: 28700, businessId: 'CALL-LIVE-006', businessName: '跨国会议同声翻译', createTime: '2026-04-25 09:00:00', translatedDuration: 0, exportedDuration: 0, translatedDurationWithDub: 450, exportedDurationWithDub: 430, dubDuration: 450, exportedDubDuration: 430, transTaskPoints: 150, dubTaskPoints: 150, exportRate: 91 },
+  { id: 'CR20260426001', userId: 'matou_12345', userName: '张三', userAccount: '13800123456', tenantName: '马投科技', productName: '智马翻译', serviceType: '文档翻译', consumePoints: 350, consumeAmount: 35.00, balanceBefore: 48300, balanceAfter: 47950, businessId: 'TASK-DOC-007', businessName: '技术文档翻译', createTime: '2026-04-26 10:30:00', translatedDuration: 600, exportedDuration: 580, translatedDurationWithDub: 200, exportedDurationWithDub: 190, dubDuration: 200, exportedDubDuration: 190, transTaskPoints: 250, dubTaskPoints: 100, exportRate: 92 },
+  // 漫影创意工作室（T006）的消费记录 - 属于智马漫影运营方 T004
+  { id: 'CR20260501001', userId: 'U10006', userName: '孙六', userAccount: '13800006666', tenantName: '漫影创意工作室', productName: '智马漫影', serviceType: '漫画生成', consumePoints: 20, consumeAmount: 4.00, balanceBefore: 8000, balanceAfter: 7980, businessId: 'COMIC-008', businessName: '品牌海报生成', createTime: '2026-05-01 10:00:00', model: 'DALL-E 3', modelVersion: 'HD' },
+  { id: 'CR20260502001', userId: 'U10007', userName: '钱七', userAccount: '13800007777', tenantName: '漫影创意工作室', productName: '智马漫影', serviceType: '视频生成', consumePoints: 40, consumeAmount: 8.00, balanceBefore: 7980, balanceAfter: 7940, businessId: 'VIDEO-009', businessName: '产品宣传视频', createTime: '2026-05-02 14:30:00' },
+  { id: 'CR20260503001', userId: 'U10008', userName: '林八', userAccount: '13800008888', tenantName: '漫影创意工作室', productName: '智马漫影', serviceType: '漫画生成', consumePoints: 15, consumeAmount: 3.00, balanceBefore: 7940, balanceAfter: 7925, businessId: 'COMIC-010', businessName: '社交媒体配图', createTime: '2026-05-03 09:00:00', model: 'DALL-E 3', modelVersion: 'HD' },
+]
+
+// 任务类型分成配置表
+export const tenantTaskShareRatios = [
+  // 马投科技 - 任务类型细分（对应功能配置的 featureId）
+  // 按照线上页面显示：1001翻译分钟数、1002文档翻译
+  { id: 'TS003', tenantId: 'T001', taskTypeId: '1001', taskTypeName: '翻译分钟数', desc: '语音翻译消耗的分钟数额度', settlePrice: 0.12, shareRatio: 15, status: true, createTime: '2026-01-10 10:00:00', updateTime: '2026-01-10 10:00:00' },
+  { id: 'TS001', tenantId: 'T001', taskTypeId: '1002', taskTypeName: '文档翻译', desc: '文档翻译次数', settlePrice: 0.10, shareRatio: 15, status: true, createTime: '2026-01-10 10:00:00', updateTime: '2026-01-10 10:00:00' },
+  { id: 'TS002', tenantId: 'T001', taskTypeId: '1003', taskTypeName: '实时翻译', desc: '实时翻译相关任务', settlePrice: 0.18, shareRatio: 10, status: true, createTime: '2026-01-10 10:00:00', updateTime: '2026-01-10 10:00:00' },
+]
