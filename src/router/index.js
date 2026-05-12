@@ -9,7 +9,10 @@ const routes = [
     children: [
       { path: 'home', name: 'Home', component: () => import('../views/home/HomePage.vue'), meta: { title: '主页' } },
       { path: 'member/list', name: 'MemberList', component: () => import('../views/member/MemberList.vue'), meta: { title: '成员管理' } },
+      { path: 'member/create', name: 'MemberCreate', component: () => import('../views/member/MemberCreate.vue'), meta: { title: '创建成员' } },
+      { path: 'member/edit/:id', name: 'MemberEdit', component: () => import('../views/member/MemberEdit.vue'), meta: { title: '编辑成员' } },
       { path: 'member/role', name: 'RoleList', component: () => import('../views/member/RoleList.vue'), meta: { title: '角色管理' } },
+      { path: 'member/role/edit/:id?', name: 'RoleEdit', component: () => import('../views/member/RoleEdit.vue'), meta: { title: '角色配置' } },
       { path: 'user/list', name: 'UserList', component: () => import('../views/user/UserList.vue'), meta: { title: '用户列表' } },
       { path: 'user/detail/:id', name: 'UserDetail', component: () => import('../views/user/UserDetail.vue'), meta: { title: '用户详情' } },
       { path: 'user/batch-create', name: 'UserBatchCreate', component: () => import('../views/user/UserBatchCreate.vue'), meta: { title: '批量创建用户' } },
