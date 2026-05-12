@@ -1,0 +1,1 @@
+import{N as e,W as t,d as n,u as r}from"./_plugin-vue_export-helper-CnfXG96-.js";import{t as i}from"./PageCard-_wVYOynq.js";var a={__name:`PaymentSetting`,setup(a){return(a,o)=>(e(),n(i,null,{default:t(()=>[...o[0]||=[r(`div`,{style:{"text-align":`center`,padding:`80px 0`,color:`#86909c`,"font-size":`14px`}},` 支付设置 - 待开发 `,-1)]]),_:1}))}};export{a as default};

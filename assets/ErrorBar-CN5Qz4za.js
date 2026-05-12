@@ -1,0 +1,1 @@
+import{N as e,bt as t,f as n,p as r,rt as i,t as a,u as o,v as s}from"./_plugin-vue_export-helper-CnfXG96-.js";import{s as c}from"./message-CJdHF-s_.js";var l={key:0,class:`error-bar`},u=a({__name:`ErrorBar`,props:{message:String},setup(a){return(u,d)=>a.message?(e(),r(`div`,l,[s(i(c)),o(`span`,null,t(a.message),1)])):n(``,!0)}},[[`__scopeId`,`data-v-6a42d067`]]);export{u as t};

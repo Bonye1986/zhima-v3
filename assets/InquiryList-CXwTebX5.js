@@ -1,0 +1,1 @@
+import{L as e,N as t,W as n,_ as r,d as i,v as a}from"./_plugin-vue_export-helper-CnfXG96-.js";import{t as o}from"./PageCard-_wVYOynq.js";var s={__name:`InquiryList`,setup(s){return(s,c)=>{let l=e(`a-empty`);return t(),i(o,null,{title:n(()=>[...c[0]||=[r(`询盘管理`,-1)]]),default:n(()=>[a(l,{description:`询盘管理功能开发中`})]),_:1})}}};export{s as default};

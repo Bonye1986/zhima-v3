@@ -1,0 +1,1 @@
+import{I as e,N as t,p as n,t as r}from"./_plugin-vue_export-helper-CnfXG96-.js";var i={},a={class:`page-card`};function o(r,i){return t(),n(`div`,a,[e(r.$slots,`default`,{},void 0,!0)])}var s=r(i,[[`render`,o],[`__scopeId`,`data-v-10473033`]]);export{s as t};
